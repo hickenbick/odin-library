@@ -1,0 +1,176 @@
+/* general and resets */
+:root {
+  --white: #fff;
+  --primary-light: #f5f5f5;
+  --secondary-light: #ddd;
+  --font-grey: #999;
+  --primary-dark: #111111;
+  --green: #9FFF9C;
+  --green-hover: #8FE58C;
+  --red: #F1C2C0;
+  --red-hover: #F6D6D5;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", Arial, Helvetica, sans-serif;
+}
+
+body {
+  background: var(--primary-light);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
+}
+
+button {
+  border: none;
+  background: transparent;
+  font: inherit;
+  cursor: pointer;
+}
+
+/* header */
+
+header {
+  background: var(--white);
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+
+header h1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 10vh;
+}
+
+/* main */
+
+main {
+  position: relative;
+  height: 100%;
+  padding: 2rem 1rem;
+}
+
+.add-btn {
+  display: flex;
+  justify-content: center;
+}
+
+.add-btn h2{
+  padding:.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 600;
+  margin-bottom: 2rem;
+}
+
+.add-btn h2:hover{
+  background-color: #ddd;
+}
+
+.books-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 2rem;
+}
+
+.book {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  font-size: 1.125rem;
+  font-weight: 500;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  border-radius: 10px;
+  padding: 1rem;
+  background: var(--white);
+  text-align: center;
+}
+
+.book button {
+  padding: .5rem 1rem;
+  border-radius: 10px;
+}
+
+.read-btn, .submit-btn {
+  background-color: var(--green);
+}
+.read-btn:hover, .submit-btn:hover {
+  background-color: var(--green-hover);
+}
+
+.remove-btn {
+  background-color: var(--red);
+  transition: .2s;
+}
+.remove-btn:hover {
+  background-color: var(--red-hover);
+  transition: .2s;
+}
+
+.modal {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.15);
+  left: 0;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.add-book-ctn {
+  background-color: var(--white);
+  border-radius: 10px; 
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  padding: 2rem;
+  display: grid;
+  gap: 1rem;
+  background-color: var(--primary-light);
+}
+
+.add-book-ctn *{
+  display: block;
+  text-align: center;
+  margin: 0 auto;
+  font-size: 1.125rem;
+}
+
+.add-book-ctn input{
+  text-align: left;
+  padding: .5rem 1rem;
+  border-radius: 10px;
+  border: none;
+  color: var(--font-grey);
+}
+
+.checkbox *{
+  display: inline-block;
+  padding: 0 1rem;
+}
+
+.submit-btn {
+  width: 100%;
+  padding: .5rem 1rem;
+  border-radius: 10px;
+}
+
+
+
+
+
+
+/* footer */
+
+footer p {
+  text-align: center;
+  background: var(--primary-dark);
+  color: var(--primary-light);
+  padding: 8px;
+  font-size: 1.125rem;
+}
